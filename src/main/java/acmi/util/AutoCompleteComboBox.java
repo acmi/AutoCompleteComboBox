@@ -108,4 +108,9 @@ public class AutoCompleteComboBox {
             }
         });
     }
+
+    public static <T> T getSelectedItem(ComboBox<T> comboBox) {
+        int index = comboBox.getSelectionModel().getSelectedIndex();
+        return index < 0 ? null : comboBox.getItems().get(index);
+    }
 }
